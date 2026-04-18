@@ -9,7 +9,6 @@ import confetti from "canvas-confetti";
 import { Heart, Stars, Clock, Calendar, Gift, Music, Volume2, VolumeX } from "lucide-react";
 
 // --- Configuration ---
-// Adjust this to the birthday date and time
 const BIRTHDAY_DATE = new Date("2026-04-20T00:00:00"); 
 
 // Birthday Score URL (Royalty Free Celebration Track)
@@ -558,25 +557,20 @@ export default function App() {
                 </div>
               </motion.div>
 
-              {/* Digital Gift Collection */}
-              <div className="grid md:grid-cols-2 gap-8">
-                 <motion.div 
-                   whileHover={{ y: -10 }}
-                   className="p-12 bg-zinc-900 text-white rounded-[50px] space-y-6 flex flex-col items-center text-center"
-                 >
-                    <div className="w-20 h-20 bg-vibrant-pink rounded-3xl flex items-center justify-center text-4xl shadow-glow">💐</div>
-                    <h3 className="text-3xl font-black">Virtual Bouquet</h3>
-                    <p className="text-zinc-400 font-medium">A field of roses that will never fade, just like our friendship.</p>
-                 </motion.div>
-
-                 <motion.div 
-                   whileHover={{ y: -10 }}
-                   className="p-12 bg-vibrant-pink text-white rounded-[50px] space-y-6 flex flex-col items-center text-center"
-                 >
-                    <div className="w-20 h-20 bg-white text-vibrant-pink rounded-3xl flex items-center justify-center text-4xl shadow-xl">🎵</div>
-                    <h3 className="text-3xl font-black">Birthday Playlist</h3>
-                    <p className="text-rose-100 font-medium">Curated songs to make your heart dance all day long.</p>
-                 </motion.div>
+              {/* Special Memory Section */}
+              <div className="w-full space-y-8">
+                <div className="text-center">
+                  <h3 className="text-3xl md:text-4xl font-black text-vibrant-plum uppercase tracking-widest">A Special Memory</h3>
+                  <div className="mt-2 h-1 w-24 bg-vibrant-pink mx-auto rounded-full" />
+                </div>
+                <div className="relative w-full aspect-video bg-black rounded-[40px] shadow-2xl overflow-hidden border-8 border-rose-100 flex items-center justify-center">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1wBuBKBciwrk4gjrN33nRTthX4TLoxs78/preview" 
+                    className="w-full h-full border-none"
+                    allow="autoplay; fullscreen"
+                    title="Special Memory"
+                  />
+                </div>
               </div>
 
               {/* Final Call to Action */}
