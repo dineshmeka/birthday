@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-vibrant-pink: #ff477e;
+  --color-vibrant-plum: #6d214f;
+  --color-vibrant-gold: #ffd93d;
+  --color-vibrant-gold-dark: #f1c40f;
+  --color-vibrant-pink-dark: #d93466;
+  --color-vibrant-bg: #fff0f6;
+  
+  --shadow-vibrant: 0 25px 50px rgba(255, 71, 126, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-vibrant-bg text-vibrant-plum antialiased;
+    overflow-x: hidden;
+  }
+}
